@@ -76,25 +76,23 @@ function generatePassword(){
     //Asks the user what to include and appends what they want to use to one array
     //So we can just grab a random character from there instead of having to look in multiple places
     if(confirm("Do you want to use lower case characters?")){
-        charactersToChooseFrom.concat(getCharsInRange(97, 122));
+        charactersToChooseFrom = charactersToChooseFrom.concat(getCharsInRange(97, 122));
     }
     if(confirm("Do you want to use UPPER CASE characters?")){
-        charactersToChooseFrom.concat(getCharsInRange(65, 90));
+        charactersToChooseFrom = charactersToChooseFrom.concat(getCharsInRange(65, 90));
     }
     if(confirm("Do you want to use numbers?")){
-        charactersToChooseFrom.concat(getCharsInRange(48, 57));
+        charactersToChooseFrom = charactersToChooseFrom.concat(getCharsInRange(48, 57));
     }
     if(confirm("Do you want to use special characters?")){
-        charactersToChooseFrom.concat(specialCharacters);
+        charactersToChooseFrom = charactersToChooseFrom.concat(specialCharacters);
     }
-    console.log(charactersToChooseFrom);
     
 
     //goes through each character
     var finalPW = "";
     for(var x = 0; x < passWLength; x++){
-        var thing = Math.floor(Math.random()*charactersToChooseFrom.length);
-        finalPW += charactersToChooseFrom[thing];
+        finalPW += charactersToChooseFrom[Math.floor(Math.random()*charactersToChooseFrom.length)];
     }
 
     return finalPW;
