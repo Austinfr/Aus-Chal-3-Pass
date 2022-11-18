@@ -14,8 +14,9 @@
 
 ## Goal
 
-Given a user input a password will be displayed in the text box that fits the user's specifications of length and character inclusion. Gives a password with really good security.
-This is an example of the website in use
+Given a user input a password will be displayed in the text box that fits the user's specifications of length and character inclusion. Returns a password that could possibly be used.
+
+This is an example of the website in after given input for a 45 character password
 ![Image of the completed website](./PasswordGenEx.png)
 
 ## Installation
