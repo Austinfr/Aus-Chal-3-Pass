@@ -2,7 +2,7 @@
 
 ## Description
 
-    - This program will prompt a user to give some inputs and will generate a password based on the users choices
+    - This program will prompt a user and will generate a password based on the users choices
     - Given a length of 8 to 128 characters, it will display a random password of that length
     - Based on the user they can choose to use lowercase, uppercase, numeric and/or special characters
 
