@@ -93,16 +93,17 @@ function generatePassword(){
     //incase they select for nothing, otherwise will display undefined the length they put in times
     if(charactersToChooseFrom.length === 0){
         return "Cannot Generate Password From Given Arguments";
-    }
+    }else{//apparently GitHub needs this clause
 
-    //Creates a string to store the password in so it can be returned
-    var finalPW = "";
-    //goes through each spot for a character and adds one from the list
-    for(var x = 0; x < passWLength; x++){
-        finalPW += charactersToChooseFrom[Math.floor(Math.random()*charactersToChooseFrom.length)];
-    }
+        //Creates a string to store the password in so it can be returned
+        var finalPW = "";
+        //goes through each spot for a character and adds one from the list
+        for(var x = 0; x < passWLength; x++){
+            finalPW += charactersToChooseFrom[Math.floor(Math.random()*charactersToChooseFrom.length)];
+        }
 
-    return finalPW;
+        return finalPW;
+    }
 }
 
 // Add event listener to generate button
