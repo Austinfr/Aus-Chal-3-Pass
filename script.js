@@ -66,9 +66,11 @@ function writePassword() {
 // Ask to include special characters as listed above
 function generatePassword(){
     
+    //Creating an array to grab different characters from
     var charactersToChooseFrom = [];
 
     var passWLength = prompt("Enter desired password length (between 8-128 characters)");
+    //checks to make sure it's between 8 and 128 characters
     while(8 > passWLength || 128 < passWLength){
         passWLength = prompt("Please try again (between 8-128 characters)");
     }
@@ -81,7 +83,7 @@ function generatePassword(){
     if(confirm("Do you want to use UPPER CASE characters?")){
         charactersToChooseFrom = charactersToChooseFrom.concat(getCharsInRange(65, 90));
     }
-    if(confirm("Do you want to use numbers?")){
+    if(confirm("Do you want to use numberic characters?")){
         charactersToChooseFrom = charactersToChooseFrom.concat(getCharsInRange(48, 57));
     }
     if(confirm("Do you want to use special characters?")){
@@ -89,8 +91,9 @@ function generatePassword(){
     }
     
 
-    //goes through each character
+    //Creates a string to store the password in so it can be returned
     var finalPW = "";
+    //goes through each spot for a character and adds one from the list
     for(var x = 0; x < passWLength; x++){
         finalPW += charactersToChooseFrom[Math.floor(Math.random()*charactersToChooseFrom.length)];
     }
