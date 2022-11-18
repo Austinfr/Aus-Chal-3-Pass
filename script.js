@@ -90,7 +90,10 @@ function generatePassword(){
         charactersToChooseFrom = charactersToChooseFrom.concat(specialCharacters);
     }
     
-
+    //incase they select for nothing, otherwise will display undefined the length they put in times
+    if(charactersToChooseFrom.length === 0){
+        return "Cannot Generate Password From Given Arguments";
+    }
     //Creates a string to store the password in so it can be returned
     var finalPW = "";
     //goes through each spot for a character and adds one from the list
