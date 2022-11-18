@@ -36,5 +36,5 @@ Please refer to the GNU General Public License in this repo
 ## Tests
 
 Use varying inputs for the password specifications to see what passwords come up.
-    - What does a password with 8 characters look like? With 128?
-    - What does a password that contains only special characters look like? Only numbers?
+- What does a password with 8 characters look like? With 128?
+- What does a password that contains only special characters look like? Only numbers?
