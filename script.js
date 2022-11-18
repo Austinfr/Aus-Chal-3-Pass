@@ -94,6 +94,7 @@ function generatePassword(){
     if(charactersToChooseFrom.length === 0){
         return "Cannot Generate Password From Given Arguments";
     }
+
     //Creates a string to store the password in so it can be returned
     var finalPW = "";
     //goes through each spot for a character and adds one from the list
